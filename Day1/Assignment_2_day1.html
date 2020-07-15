@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var,Let,Const</title>
+    <h1>Difference between var,let and const</h1>
+</head>
+<body>
+    <script src="Assignment_2_day1.js"></script>
+    <h2>Press f12 to open the console and view live examples </h2>
+    Using "var" you can create a new variable which can be changed at any point of time.
+    Its not safe to use this when you don't want the variable altered by mistake i  the 
+    due course of writing the code. Hence we have other means of declaring variables.<br>
+    <br>
+    Using "const" to declare a variable is another available way
+    But once the variable is declared usig this keyword, it cannot be changed.
+    Althogh if the object stored in the variable is mutable, like an 
+    array for instance, then it can be mutated, but still you cannot 
+    redeclare the variable and assign another value to it, it'll throw an error.
+    <br>
+    Doing this can throw an error:<br>
+    const id_num = 11810951;<br>
+    console.log(id_num);<br>
+    id_num = 1210091;<br>
+    console.log(id_num); <br><br>
+    or<br>
+    
+const fruits = ["apple","banana","grapes"]<br>
+console.log(fruits)<br>
+fruits.push("orange")<br>
+console.log(fruits) // This is allowed<br>
+fruits = ["apple", "banana", "chikoo"] //But this will throw an error<br>
+<br>
+Another way of declaring variable is is using the keyword
+"let". let allows you to declare variables that are limited to the scope of a block statement, or expression on which it is used, unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope. The other difference between var and let is that the latter is initialized to a value only when a parser evaluates it.
+
+Just like const the let does not create properties of the window object when declared globally (in the top-most scope).
+<br>
+Example:<br>
+var city = "Delhi" <br>
+
+{<br>
+let city = "Nagpur"<br>
+console.log(city)<br>
+
+}<br>
+console.log(city)<br>
+here city name was not changed outside the scope, and remained
+"Delhi".
+</body>
+</html>
